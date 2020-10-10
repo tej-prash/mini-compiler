@@ -45,7 +45,7 @@ The first statement is assigned a scope of 0_1. The statements inside the while 
 4. The scope of the variable is written in the format a_b_c. Here a,b,c represent numbers and _ represents the nested scope.
 
 During the semantic phase, Abstract Syntax Tree(AST) is used in obtain a graphical representation of the code. AST is implemented using n-ary trees as the underlying data structure. Each node of the tree falls into one of the following categories:
-- Node with two children: An arithmetic operation, for example, would contain an operator as the root node and operands as the children. Moreover, condition specific operations consist of keywords as the root, condition as the left child and suite as the right child.
+- Node with two children: An arithmetic operation, for example, would contain an operator as the root node and operands as the children. Moreover, condition specific operations consist of keywords as the root, condition as the left child and suite as the right child. For example, an if-else block is represented using "ifstmt" as the keyword in the parent node.  
 - Node with more than two children: In order to represent block statements, a node called “Block” is created every time a new scope is entered and its children consist of multiple statements within the particular block. 
 
 The output of the compiler represents Intermediate Code as Quadruple-based Three-Address Code. Every instruction consists of an operator, along with at most two operands and a result. 
